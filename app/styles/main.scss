@@ -1,0 +1,52 @@
+$color-turquoise: #1abc9c;
+$color-emerald: #2ecc71;
+$color-peter-river: #3498db;
+$color-amethyst: #9b59b6;
+$color-wet-asphalt: #34495e;
+
+$gradient-really-nice: linear-gradient(45deg, $color-turquoise 0%, $color-emerald 33.3%, $color-peter-river 66.6%, $color-amethyst 77.7%, $color-wet-asphalt 100%);
+
+@keyframes AnimationPrettyGood {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationNausea {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: $gradient-really-nice;
+  background-size: 800% 800%;
+
+  animation: AnimationPrettyGood 3s ease infinite;
+
+  display: flex;
+  justify-content: center;
+
+  user-select: none;
+}
+
+.items {
+}
+
+.item {
+  font-size: 5rem;
+
+  animation: AnimationNausea 1s infinite;
+}
